@@ -1,0 +1,14 @@
+请先安装git软件，借助git的linux环境。
+第1步：OPEN GIT BASH HERE
+第2步：./岚图性能监控平台.exe
+第3步：打开浏览器输入提示的网址
+
+注意：
+此软件Windows环境下无法使用，
+LINUX环境可用。
+想在Windows环境下使用，需要安装一个Linux模拟器，例如Cygwin或者MinGW等。这些模拟器可以在Windows系统下提供一个类似Linux的环境，从而可以运行Linux下的exe脚本。
+最简单的环境下载安装git.
+git安装包地址下载或去官网：https://pan.dfmc.com.cn/link/AA11F07510981A4066857AF722235948B6
+文件名：Git-2.41.0.2-64-bit.exe
+有效期限：2023-09-07 16:12
+by Shirley 2023.08.08

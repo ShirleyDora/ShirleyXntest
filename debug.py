@@ -18,7 +18,9 @@ from flask_socketio import SocketIO, disconnect
 from flask import Flask
 import fire as fire
 import signal
-
+from engineio.async_drivers import gevent
+sys.stdout.isatty = lambda: False
+sys.stdout.encoding = sys.getdefaultencoding()
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 app.register_blueprint(api)
@@ -151,8 +153,8 @@ def openUrl(host: str, port: int):
     while flag:
         logger.info('Start shirley server ...')
         flag = getServerStatus(host, port)
-    webbrowser.open(f'http://{host}:{port}/?platform=Android&lan=en', new=2)
-    logger.info(f'Running on http://{host}:{port}/?platform=Android&lan=en (Press CTRL+C to quit)')
+    webbrowser.open(f'http://{host}:{port}/?platform=Android&lan=cn', new=1)
+    logger.info(f'Running on http://{host}:{port}/?platform=Android&lan=cn (Press CTRL+C to quit)')
 
 
 def startServer(host: str, port: int):
@@ -163,7 +165,7 @@ def startServer(host: str, port: int):
     :return:
     """
     try:
-        logger.info(f'Running on http://{host}:{port}/?platform=Android&lan=en (Press CTRL+C to quit)')
+        logger.info(f'Running on http://{host}:{port}/?platform=Android&lan=cn (Press CTRL+C to quit)')
         socketio.run(app, host=host, debug=False, port=port)
     except Exception:
         sys.exit(0)
